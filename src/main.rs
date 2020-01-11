@@ -56,15 +56,16 @@ fn main() {
     for c1 in cores.clone() {
         for c2 in cores.clone() {
             if c2.id > c1.id {
-                test_unbounded(c1, c2);
+                test_bounded(c1, c2);
             }
         }
     }
     for c1 in cores.clone() {
         for c2 in cores.clone() {
             if c2.id > c1.id {
-                test_bounded(c1, c2);
+                test_unbounded(c1, c2);
             }
         }
     }
+
 }
